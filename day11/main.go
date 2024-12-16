@@ -51,8 +51,8 @@ func loop(rock, blinks int, cache map[Key]int) int {
 		return res
 	}
 
-	if digits := aoc.CountDigits(rock); digits % 2 == 0 {
-        a, b := aoc.SplitDigits(rock, digits)
+	if digits := aoc.CountDigits(rock); digits%2 == 0 {
+		a, b := aoc.SplitDigits(rock, digits)
 		res := loop(a, blinks-1, cache) + loop(b, blinks-1, cache)
 		cache[Key{value: rock, blinks: blinks}] = res
 

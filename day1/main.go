@@ -9,7 +9,7 @@ import (
 
 func main() {
 	lines := aoc.ReadFileLines("./input")
-    size := len(lines)
+	size := len(lines)
 
 	leftArr := make([]int, 0, size)
 	rightArr := make([]int, 0, size)

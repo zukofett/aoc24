@@ -77,9 +77,9 @@ func part2(matrix []string) string {
 					num_of_mases++
 				}
 			}
-            if num_of_mases == 4 {
-                xmases++
-            }
+			if num_of_mases == 4 {
+				xmases++
+			}
 		}
 	}
 	return fmt.Sprintf("There are %d XMASs", xmases)

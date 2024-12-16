@@ -26,14 +26,13 @@ func CountDigits(num int) int {
 }
 
 func SplitDigits(num, digits int) (int, int) {
-    div := 1
-    for i := 0; i < digits/2; i++ {
-        div *= 10
-    }
+	div := 1
+	for i := 0; i < digits/2; i++ {
+		div *= 10
+	}
 
-    a := num / div
-    b := num % div
-
+	a := num / div
+	b := num % div
 
 	return a, b
 }

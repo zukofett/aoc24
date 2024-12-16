@@ -46,18 +46,18 @@ func second(lines []string) string {
 	lineOps := NewMultRX.FindAllStringSubmatch(line, -1)
 	for _, x := range lineOps {
 		if mult {
-            expression := MultRX.FindAllStringSubmatch(x[0], -1)
-            for _, e := range expression {
-                first, err := strconv.Atoi(e[1])
-                if err != nil {
-                    log.Fatal(err)
-                }
-                second, err := strconv.Atoi(e[2])
-                if err != nil {
-                    log.Fatal(err)
-                }
-                target += first * second
-            }
+			expression := MultRX.FindAllStringSubmatch(x[0], -1)
+			for _, e := range expression {
+				first, err := strconv.Atoi(e[1])
+				if err != nil {
+					log.Fatal(err)
+				}
+				second, err := strconv.Atoi(e[2])
+				if err != nil {
+					log.Fatal(err)
+				}
+				target += first * second
+			}
 		}
 		mult = x[3] == "do()"
 	}

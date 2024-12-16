@@ -19,13 +19,13 @@ func (c *Coordinate) TurnRight() {
 }
 
 func (c *Coordinate) Walk() {
-    c.Position.X += c.Direction.X
-    c.Position.Y += c.Direction.Y
+	c.Position.X += c.Direction.X
+	c.Position.Y += c.Direction.Y
 }
 
 func (c Coordinate) GetNext() Point {
-    return Point{
-        X: c.Position.X + c.Direction.X,
-        Y: c.Position.Y + c.Direction.Y,
-    }
+	return Point{
+		X: c.Position.X + c.Direction.X,
+		Y: c.Position.Y + c.Direction.Y,
+	}
 }

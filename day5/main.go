@@ -61,26 +61,26 @@ func (ch *Chalange) part2() string {
 
 func (ch *Chalange) isListValid(list []int) bool {
 	for i, num := range list {
-        if aoc.SlicesIntersect(list[i:], ch.WrongPagesMap[num]) {
-            return false
-        }
+		if aoc.SlicesIntersect(list[i:], ch.WrongPagesMap[num]) {
+			return false
+		}
 	}
 	return true
 }
 
 func (ch *Chalange) makeValid(list []int) {
 	for i := 0; i < len(list); {
-        changed := false
+		changed := false
 		for _, n := range ch.WrongPagesMap[list[i]] {
 			if slices.Contains(list[i:], n) {
 				wrongIdx := slices.Index(list, n)
 				list[i], list[wrongIdx] = list[wrongIdx], list[i]
-                changed = true
-                break
+				changed = true
+				break
 			}
 		}
-        if !changed {
-            i++
-        }
+		if !changed {
+			i++
+		}
 	}
 }

@@ -115,6 +115,6 @@ func (ch *Chalange) part2() string {
 			ch.lines[step.Y][step.X] = '.'
 		}
 
-    }
+	}
 	return fmt.Sprintf("num of visited tiles is: %d\n", len(points))
 }
